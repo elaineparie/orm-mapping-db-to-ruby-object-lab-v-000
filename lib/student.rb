@@ -64,7 +64,6 @@ WHERE grade = 10
 LIMIT ?
 SQL
 DB[:conn].execute(sql, x)
-binding.pry
 end
 
   def save
