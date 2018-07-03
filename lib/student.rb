@@ -64,9 +64,7 @@ WHERE grade = 10
 GROUP BY grade
 LIMIT ?
 SQL
-DB[:conn].execute(sql, x).map do |row|
-      self.new_from_db(row)
-    end.first
+DB[:conn].execute(sql, x)
 end
 
   def save
