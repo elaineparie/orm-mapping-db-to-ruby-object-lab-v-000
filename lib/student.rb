@@ -64,7 +64,7 @@ WHERE grade = 10
 GROUP BY grade
 LIMIT ?
 SQL
-DB[:conn].execute(sql)
+DB[:conn].execute(sql, x)
 end
 
   def save
