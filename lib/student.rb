@@ -51,8 +51,8 @@ FROM students
 WHERE grade < 12
 GROUP BY grade
 SQL
-DB[:conn].execute(sql)
-self.new_from_db(sql)
+DB[:conn].execute(sql).map do |row|
+self.new_from_db(row)
 
 
 end
