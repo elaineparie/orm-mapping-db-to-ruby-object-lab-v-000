@@ -62,8 +62,9 @@ SELECT *
 FROM students
 WHERE grade = 10
 LIMIT ?
+GROUP BY grade
 SQL
-DB[:conn].execute(sql)
+DB[:conn].execute(sql, x)
 end
 
   def save
