@@ -54,7 +54,7 @@ SQL
 DB[:conn].execute(sql)
 self.new_from_db(sql)
 
-    end
+
 end
 
   def save
