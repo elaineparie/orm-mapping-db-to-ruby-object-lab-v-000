@@ -60,8 +60,8 @@ def self.first_X_students_in_grade_10(x)
 sql = <<-SQL
 SELECT *
 FROM students
-LIMIT ?
 WHERE grade = 10
+LIMIT ?
 GROUP BY grade
 SQL
 DB[:conn].execute(sql)
